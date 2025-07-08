@@ -1,0 +1,578 @@
+[
+  {
+    "Question": "What is the final value of the variable x after the following C++ code is executed?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 10;\n    int y = 5;\n    x = y;\n    cout << x;\n    return 0;\n}",
+    "Options": [
+      "1",
+      "10",
+      "None",
+      "5"
+    ],
+    "Correct Option": 4,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "The code executes sequentially. Initially, x is assigned 10 and y is assigned 5. The statement x = y; updates x to 5."
+  },
+  {
+    "Question": "What is the final value of the variable z after the following C++ code is executed?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 5;\n    int y = 2;\n    int z = x + y;\n    cout << z;\n    return 0;\n}",
+    "Options": [
+      "7",
+      "19",
+      "3",
+      "5"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "The expression x + y evaluates to 5 + 2 = 7."
+  },
+  {
+    "Question": "What will be the value of x after this code runs?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 20;\n    int y = 10;\n    x = x + y;\n    cout << x;\n    return 0;\n}",
+    "Options": [
+      "10",
+      "20",
+      "40",
+      "30"
+    ],
+    "Correct Option": 4,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "The statement x = x + y; means x = 20 + 10;, which results in x = 30."
+  },
+  {
+    "Question": "Which of the following is valid assignment in C++?",
+    "Code": "",
+    "Options": [
+      "int x, y = 5, 10;",
+      "int x, y, z; x = y = z = 0;",
+      "int x = 5 +;",
+      "string x == \"hello\";"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "Multiple variable assignment x = y = z = 0; is valid in C++."
+  },
+  {
+    "Question": "What will happen if the following C++ code is executed?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 10;\n    string y = \"5\";\n    int z = x + y;\n    cout << z;\n    return 0;\n}",
+    "Options": [
+      "Prints 15",
+      "Prints 105",
+      "Error",
+      "Prints 10"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "The given C++ code will result in a compilation error because it tries to add int and string."
+  },
+  {
+    "Question": "Which of the following is the correct way to assign a value to a variable in C++?",
+    "Code": "",
+    "Options": [
+      "x == 10;",
+      "10 = x;",
+      "x = 10;",
+      "assign x = 10;"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "x = 10; is the correct syntax to assign 10 to x in C++."
+  },
+  {
+    "Question": "Which of the following is NOT a valid variable name in C++?",
+    "Code": "",
+    "Options": [
+      "my_variable",
+      "1st_variable",
+      "variable1",
+      "_myVar"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "Variable names cannot begin with a digit, so '1st_variable' is invalid."
+  },
+  {
+    "Question": "What is the value of x after the following C++ code executes?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 5;\n    x += 3;\n    cout << x;\n    return 0;\n}",
+    "Options": [
+      "3",
+      "5",
+      "8",
+      "Error"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "x += 3; adds 3 to x, resulting in 8."
+  },
+  {
+    "Question": "Which of the following correctly initializes multiple variables on a single line in C++?",
+    "Code": "#include <iostream>\nusing namespace std;",
+    "Options": [
+      "int x = 10, int y = 20;",
+      "int x, y = 10 20;",
+      "int x = 10, y = 20;",
+      "int x = 10, y == 20;"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "int x = 10, y = 20; declares and initializes both variables correctly on the same line."
+  },
+  {
+    "Question": "Which of the following is true about variable names in C++?",
+    "Code": "",
+    "Options": [
+      "Variable names can start with a number",
+      "Variable names can contain spaces",
+      "Variable names can include underscores",
+      "Variable names are case-insensitive"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "Variable names can include underscores but cannot start with numbers or have spaces, and are case-sensitive."
+  },
+  {
+    "Question": "What will happen if you try to access a variable that has not been defined in C++?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << x;\n    return 0;\n}",
+    "Options": [
+      "Prints None",
+      "Prints 0",
+      "Prints x",
+      "Throws a compilation error"
+    ],
+    "Correct Option": 4,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "Accessing an undeclared variable causes a compilation error."
+  },
+  {
+    "Question": "What will happen when you assign multiple variables in a single line in C++?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 1, b = 2, c = 3;\n    cout << a << \" \" << b << \" \" << c;\n    return 0;\n}",
+    "Options": [
+      "Throws a SyntaxError",
+      "Prints 1 2 3",
+      "Prints 3 2 1",
+      "Throws a ValueError"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "Assigning multiple variables in one line is valid and prints '1 2 3'."
+  },
+  {
+    "Question": "What is the correct way to declare an integer variable named num in C++?",
+    "Code": "",
+    "Options": [
+      "num = int;",
+      "int num;",
+      "integer num;",
+      "num: int;"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "int num; is the proper syntax for declaring an integer variable in C++."
+  },
+  {
+    "Question": "What is the output of the following C++ code snippet?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 10;\n    x += 5;\n    cout << x;\n    return 0;\n}",
+    "Options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "x += 5; means x = x + 5;, resulting in 15."
+  },
+  {
+    "Question": "Which of the following is a valid C++ identifier?",
+    "Code": "",
+    "Options": [
+      "_myVariable",
+      "2myVariable",
+      "my Variable",
+      "$myVariable"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "Variable names can start with underscore; other options are invalid."
+  },
+  {
+    "Question": "In C++, what is the keyword used to create a constant variable?",
+    "Code": "",
+    "Options": [
+      "let",
+      "fixed",
+      "const",
+      "static"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "const is the correct keyword to define a constant variable in C++."
+  },
+  {
+    "Question": "Which of the following is a valid way to initialize a floating-point variable in C++?",
+    "Code": "",
+    "Options": [
+      "float num = 3.14;",
+      "float num = \"3.14\";",
+      "num = float 3.14;",
+      "float = 3.14;"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "float num = 3.14; correctly initializes a floating-point variable."
+  },
+  {
+    "Question": "Fill in the blank to correctly declare an integer variable in C++:",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    _____ num = 10;  // Declare an integer variable\n    cout << num;\n    return 0;\n}",
+    "Options": [
+      "integer",
+      "int",
+      "var",
+      "num"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "int is the correct keyword for declaring an integer variable."
+  },
+  {
+    "Question": "Fill in the blank to correctly initialize multiple variables in a single line:",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    _____ x = 5, y = 10, z = 15;  // Declare and initialize multiple variables\n    cout << x << \" \" << y << \" \" << z;\n    return 0;\n}",
+    "Options": [
+      "var",
+      "int",
+      "let",
+      "declare"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "int is the proper type for declaring multiple integer variables in C++."
+  },
+  {
+    "Question": "To use the value of a variable in C++, what do you need to know?",
+    "Code": "",
+    "Options": [
+      "The size of the memory used by its data type",
+      "The source of the data being stored",
+      "The physical address location in memory",
+      "A name to reference the variable"
+    ],
+    "Correct Option": 4,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "To use a variable, you need its name, which allows access to its stored value."
+  },
+  {
+    "Question": "What will be the output of the following C++ program?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 5, b = 10;\n    int temp = a;\n    a = b;\n    b = temp;\n    cout << a << \" \" << b << endl;\n    return 0;\n}",
+    "Options": [
+      "5 10",
+      "10 5",
+      "0 0",
+      "5 5"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "The temporary variable allows swapping a and b, so output is '10 5'."
+  },
+  {
+    "Question": "What will be the output of the following C++ program?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 5, b = 10;\n    a = b;\n    b = a;\n    cout << a << \" \" << b << endl;\n    return 0;\n}",
+    "Options": [
+      "10 5",
+      "5 10",
+      "10 10",
+      "0 0"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "a = b; sets a to 10, then b = a; sets b to 10, losing the original 5."
+  },
+  {
+    "Question": "Fill in the blanks to correctly swap the values of a and b using a temporary variable.",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 5, b = 10;\n    \n    ________ temp = a;\n    a = ________;\n    b = ________;\n    \n    cout << a << \" \" << b << endl;\n    return 0;\n}",
+    "Options": [
+      "int, b, temp",
+      "int, temp, b",
+      "b, temp, int",
+      "temp, int, b"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "int temp = a; stores a; a = b; assigns b to a; b = temp; assigns original a to b."
+  },
+  {
+    "Question": "What will be the output of the following C++ program?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    string firstName = 'John';\n    cout << firstName << endl;\n    return 0;\n}",
+    "Options": [
+      "John",
+      "'John'",
+      "Compilation Error",
+      "J"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "String literals require double quotes in C++, using single quotes causes compilation error."
+  },
+  {
+    "Question": "Which of the following correctly initializes all variables?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    ________ name = \"Alice\";\n    ________ age = \"21\";\n    ________ grade = \"B\";\n    cout << name << \" is \" << age << \" years old and got a \" << grade << \" in the exam.\" << endl;\n    return 0;\n}",
+    "Options": [
+      "string, string, string",
+      "string, int, char",
+      "char, int, char",
+      "int, string, char"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "name is a string, age is an int (21 without quotes), grade is a char ('B' with single quotes)."
+  },
+  {
+    "Question": "What will be the output of the following C++ program?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    char symbol = \"!\";\n    cout << symbol << endl;\n    return 0;\n}",
+    "Options": [
+      "!",
+      "\"!\"",
+      "Compilation Error",
+      "symbol"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "char must be assigned single quotes, double quotes cause compilation error."
+  },
+  {
+    "Question": "Which of the following correctly declares and initializes all variables without errors?",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    ________ city = \"New York\";\n    ________ zipCode = \"10001\";\n    ________ firstLetter = \"N\";\n    cout << \"City: \" << city << \", ZIP: \" << zipCode << \", Starts with: \" << firstLetter << endl;\n    return 0;\n}",
+    "Options": [
+      "string, int, char",
+      "string, string, char",
+      "string, int, string",
+      "string, string, string"
+    ],
+    "Correct Option": 4,
+    "Tags": [
+      "CSC111",
+      "Variables"
+    ],
+    "Explanation": "All variables are declared as strings because zipCode and firstLetter use double quotes."
+  },
+  {
+    "Question": "What will the following C++ code print after execution?\n\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string x;\n    cout << \"Enter your age: \";\n    cin >> x;\n    cout << \"Your age is \" + x;\n    return 0;\n}\n\nAssume the user inputs 25.",
+    "Code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string x;\n    cout << \"Enter your age: \";\n    cin >> x;\n    cout << \"Your age is \" + x;\n    return 0;\n}",
+    "Options": [
+      "Your age is 25",
+      "Your age is '25'",
+      "Your age is 25.0",
+      "Your age is 25 years"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "A. Correct – Since cin reads input as a string, x stores \"25\", and cout << \"Your age is \" + x; results in \"Your age is 25\"."
+  },
+  {
+    "Question": "What will the following C++ code do?\n\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    cout << \"Enter your name: \";\n    cin >> name;\n    cout << \"Hello, \" + name;\n    return 0;\n}",
+    "Code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    cout << \"Enter your name: \";\n    cin >> name;\n    cout << \"Hello, \" + name;\n    return 0;\n}",
+    "Options": [
+      "Prompts the user to enter their name and prints \"Hello, \" followed by the name",
+      "Prompts the user to enter their name and prints only \"Hello\"",
+      "Raises a SyntaxError",
+      "Prints \"Hello, name\""
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "A. Correct – The cin reads user input into name, and \"Hello, \" is concatenated with name before printing."
+  },
+  {
+    "Question": "Which function is used to display output in C++?",
+    "Code": "",
+    "Options": [
+      "display()",
+      "output()",
+      "cout",
+      "echo()"
+    ],
+    "Correct Option": 3,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "C. Correct – cout is the correct function to print output in C++."
+  },
+  {
+    "Question": "What is the output of the following C++ code?\n\n#include <iostream>\nusing namespace std;\n\nint main() {\n    string first_name = \"John\";\n    string last_name = \"Doe\";\n    cout << first_name << \" \" << last_name;\n    return 0;\n}",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    string first_name = \"John\";\n    string last_name = \"Doe\";\n    cout << first_name << \" \" << last_name;\n    return 0;\n}",
+    "Options": [
+      "JohnDoe",
+      "John Doe",
+      "John\\nDoe",
+      "Error"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "B. Correct – cout << first_name << \" \" << last_name; prints \"John Doe\" with a space."
+  },
+  {
+    "Question": "What is the missing part to print multiple variables in the same line in C++?\n\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 10;\n    int y = 20;\n    cout << _____; // What should go here?\n    return 0;\n}",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 10;\n    int y = 20;\n    cout << _____; // What should go here?\n    return 0;\n}",
+    "Options": [
+      "\"x + y\"",
+      "x << \" \" << y",
+      "(x y)",
+      "x + \" \" + y"
+    ],
+    "Correct Option": 2,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "B. Correct – cout << x << \" \" << y; prints 10 20 correctly in C++."
+  },
+  {
+    "Question": "Fill in the blank to ask the user for a number and add 10 to it in C++:\n\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int num;\n     _____            // What should go here?\n    cin >> num;\n    cout << \"Result: \" << num + 10;\n    return 0;\n}",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int num;\n     _____            // What should go here?\n    cin >> num;\n    cout << \"Result: \" << num + 10;\n    return 0;\n}",
+    "Options": [
+      "cout << \"Enter a number: \";",
+      "cout << Enter a number",
+      "cin >> \"num = 10\";",
+      "cin >> num;"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "A. Correct – cout << \"Enter a number: \"; correctly prompts the user for input."
+  },
+  {
+    "Question": "Fill in the blank to get user input and display it as part of a message in C++:\n\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string city;\n    _____         // What should go here?\n    getline(cin, city);\n    cout << \"You live in \" + city;\n    return 0;\n}",
+    "Code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string city;\n    _____         // What should go here?\n    getline(cin, city);\n    cout << \"You live in \" + city;\n    return 0;\n}",
+    "Options": [
+      "cout << \"Enter your city: \";",
+      "cin >> “Enter your city”;",
+      "string(city) = input(\"Enter your city: \");",
+      "print(\"Enter your city: \");"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "A. Correct – cout << \"Enter your city: \"; properly prompts the user."
+  },
+  {
+    "Question": "Fill in the blank to create a formatted output for the user's details in C++:\n\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name, age;\n    cout << \"Enter your name: \";\n    getline(cin, name);\n    cout << \"Enter your age: \";\n    getline(cin, age);\n    cout << _____;  // What should go here?\n    return 0;\n}",
+    "Code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name, age;\n    cout << \"Enter your name: \";\n    getline(cin, name);\n    cout << \"Enter your age: \";\n    getline(cin, age);\n    cout << _____;  // What should go here?\n    return 0;\n}",
+    "Options": [
+      "\"Name: \" + name + \", Age: \" + age",
+      "\"Name: {name}, Age: {age}\"",
+      "name >> \", \" >> age",
+      "\"Name:\", name, \"Age:\", age"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "A. Correct – cout << \"Name: \" + name + \", Age: \" + age; properly concatenates and formats the output."
+  },
+  {
+    "Question": "How would you correctly convert a floating-point number to an integer before displaying it in C++?\n\n#include <iostream>\nusing namespace std;\n\nint main() {\n    float value;\n    cout << \"Enter a value: \";\n    cin >> value;  \n    cout << \"You entered: \" << _____;  // What should go here?\n    return 0;\n}",
+    "Code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    float value;\n    cout << \"Enter a value: \";\n    cin >> value;  \n    cout << \"You entered: \" << _____;  // What should go here?\n    return 0;\n}",
+    "Options": [
+      "static_cast<int>(value)",
+      "(int)value",
+      "toInt(value)",
+      "convert<int>(value)"
+    ],
+    "Correct Option": 1,
+    "Tags": [
+      "CSC111",
+      "Input/Output"
+    ],
+    "Explanation": "A. Correct – static_cast<int>(value) is the recommended way to safely convert a float to an int in C++."
+  }
+]
