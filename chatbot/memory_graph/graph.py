@@ -21,7 +21,6 @@ from langgraph.prebuilt import ToolNode
 from langgraph.checkpoint.memory import MemorySaver
 from langmem.short_term import SummarizationNode
 from langchain_core.messages.utils import count_tokens_approximately
-from langchain_core.documents import Document
 
 # Model imports - using newer langchain-ollama
 from langchain_ollama import ChatOllama
@@ -55,47 +54,9 @@ def get_user_id(config: RunnableConfig) -> str:
         raise ValueError("User ID needs to be provided to save a memory.")
     return user_id
 
-
-def save_or_update_memory(memory: str, config: RunnableConfig) -> str:
-    """Save or update memory in vectorstore and JSON."""
-    user_id = config["configurable"].get("user_id")
-    if not user_id:
-        raise ValueError("User ID required to store memory.")
-
-    #Search for similar existing memory
-    existing = recall_vector_store.similarity_search(
-        memory, k=1,
-        filter=lambda doc: doc.metadata.get("user_id") == user_id
-    )
-    
-    #If similar exists (cosine sim > 0.85), delete old
-    if existing:
-        doc_id = existing[0].metadata.get("id")
-        if doc_id:
-            delete_user_memory_by_id(user_id, doc_id)
-
-    # Save new memory
-    document = Document(
-        page_content=memory,
-        id=str(uuid.uuid4()),
-        metadata={"user_id": user_id}
-    )
-    recall_vector_store.add_documents([document])
-
-    #Log to JSON
-    os.makedirs("user_memory_logs", exist_ok=True)
-    log_path = f"user_memory_logs/{user_id}.json"
-    memory_entry = {
-        "timestamp": str(datetime.now()),
-        "id": document.id,
-        "memory": memory,
-    }
-    with open(log_path, "a", encoding="utf-8") as f:
-        json.dump(memory_entry, f)
-        f.write("\n")
-
-    return f"Updated memory saved for user {user_id}."
-
+# Memory recall and searching tools
+@tool
+def save_recall_memory(memory: str, config: RunnableConfig) -> str:
     """Save memory to vectorstore and JSON log file for persistence and audit."""
     user_id = config["configurable"].get("user_id")
     if not user_id:
@@ -145,7 +106,7 @@ def search_recall_memories(query: str, config: RunnableConfig) -> List[str]:
 
 
 # Define tools list
-tools = [save_or_update_memory, search_recall_memories]
+tools = [save_recall_memory, search_recall_memories]
 
 def delete_user_memory_by_id(user_id: str, doc_id: str):
     """Delete from vectorstore and JSON."""
@@ -301,19 +262,12 @@ def agent(state: State, config: RunnableConfig) -> State:
     
     # If tools were called, add results to the response
     if tool_calls:
-        # Remove TOOL_CALL lines from the response
-        cleaned_lines = [
+        # Remove TOOL_CALL lines from the visible message
+        cleaned = "\n".join(
             line for line in response_content.split("\n")
             if not line.strip().startswith("TOOL_CALL:")
-        ]
-        visible_response = "\n".join(cleaned_lines).strip()
-
-        # Show a simple memory confirmation
-        if any("Memory saved" in msg for msg in tool_calls):
-            visible_response += "\n\nSaved to memory."
-
-        prediction.content = visible_response
-
+        ).strip()
+        prediction.content = cleaned + ("\n\n" + "\n".join(tool_calls) if tool_calls else "")
 
     
     return {"messages": [prediction]}

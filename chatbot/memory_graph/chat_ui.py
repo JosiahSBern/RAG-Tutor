@@ -8,7 +8,7 @@ from graph import (
     get_user_id,
     load_all_user_memories,
     delete_user_memory_by_id,
-    save_or_update_memory
+    save_recall_memory
 )
 from langchain_core.documents import Document
 
